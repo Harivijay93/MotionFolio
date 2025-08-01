@@ -1,12 +1,40 @@
-# React + Vite
+# 🎨 MotionFolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A modern animated portfolio built with React, TailwindCSS, and GSAP**
 
-Currently, two official plugins are available:
+MotionFolio is a personal portfolio website designed to highlight your work, skills, and personality through smooth animations, clean design, and responsive layouts. Built with React, styled using TailwindCSS, and animated with GSAP, this project is perfect for developers, designers, and creatives looking to stand out online.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React – Component-based UI
+- 🎨 TailwindCSS – Utility-first CSS for rapid styling
+- 🎞️ GSAP – High-performance animations and scroll effects
+
+---
+
+## ✨ Features
+
+- Animated landing hero section
+- Scroll-triggered reveal animations (GSAP ScrollTrigger)
+- Responsive layout across devices
+- Dark mode toggle
+- Smooth transitions between sections
+- Project showcase & contact form
+- Clean, minimal, and accessible UI
+
+---
+
+## 📦 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/Harivijay93/motionfolio.git
+cd motionfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
