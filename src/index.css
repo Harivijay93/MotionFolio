@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* base is foundation like fonts elemnts  global styles */
+@layer base {
+    @font-face {
+        font-family: 'aeonik';
+        src: url('/public/fonts/Aeonik-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'aeonik';
+        src: url('/public/fonts/Aeonik-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'aeonik';
+        src: url('/public/fonts/Aeonik-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'aeonik';
+        src: url('/public/fonts/Aeonik-Black.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+}
+
+@theme {
+  --font-sans: "aeonik";
+  --color-blue-50: #598eff;
+  --color-blue-300: #1c34ff;
+  --color-white-50: #fdfdfd;
+  --color-black-100: #0b0620;
+  --color-black-300: #17151f;
+  --color-pink-100: #ff28d5;
+  --color-primary: #a7a7a7;
+}
+
+html,
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: var(--color-black-100);
+  color: var(--color-primary);
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100dvw;
+  min-height: 100dvh;
+}
