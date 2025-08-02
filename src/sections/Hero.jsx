@@ -1,8 +1,10 @@
 import React from 'react'
+import GradientSpheres from '../components/GradientSpheres'
 
 const Hero = () => {
   return (
     <section id='Home' className='h-dvh relative text-white-50 md:p-0 px-5'>
+      <GradientSpheres sphere1Class={"gradient-sphere sphere-1"} sphere2Class={"gradient-sphere sphere-2"}/>
         <div className='w-full h-full flex-center'>
           <div className='container w-full h-full'>
             <div className='md:mt-40 mt-20'>
