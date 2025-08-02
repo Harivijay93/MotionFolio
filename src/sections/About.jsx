@@ -1,6 +1,9 @@
-import React from 'react'
-import GradientSpheres from '../components/GradientSpheres'
-import TitleHead from '../components/TitleHead'
+import { Canvas } from "@react-three/fiber";
+
+import TitleHead from "../components/TitleHead";
+import GradientSpheres from "../components/GradientSpheres";
+import { Alien } from "../components/models/Alien";
+import { OrbitControls } from "@react-three/drei";
 
 const About = () => {
   return (
@@ -25,6 +28,63 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                     {/* HEDGEHOG */}
+                    <div className="md:col-span-5 col-span-12 row-span-5">
+                       <div className="bg-[#c8d751] hover:cursor-grab rounded-2xl w-full md:h-full h-60">
+                        <div className='w-full h-full'>
+                            <Canvas>
+                                <OrbitControls enableZoom={false} />
+                                <Alien scale={2} position={[0, -5.5, 0]} rotation={[0, -0.5, 0]} />
+                            </Canvas>
+                        </div>
+                       </div>
+                    </div>
+                    <div className="md:col-span-6 col-span-12 row-span-3">
+                        <div className="bg-black-300 rounded-2xl p-7 w-full h-full">
+                            <div className="flex flex-col h-full justify-center gap-2">
+                            <h1 className="gradient-title md:text-3xl text-2xl font-medium">
+                                Web Design & Dev
+                            </h1>
+                            <p className="md:text-2xl max-w-96">
+                                Cleanly Designed, Conversion-focused, and build for easy
+                                updates.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="md:col-span-6 col-span-12 row-span-3">
+                    <div className="bg-black-300 rounded-2xl p-7 w-full h-full">
+                        <div className="flex flex-col h-full justify-center gap-2">
+                        <h1 className="gradient-title md:text-3xl text-2xl font-medium">
+                            UX UI Design
+                        </h1>
+                        <p className="md:text-2xl max-w-96">
+                            Seamless web or mobile app design to wow your users.
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                    <div className="md:col-span-4 col-span-12 row-span-4">
+                    <div className="bg-black-300 rounded-2xl p-7 w-full h-full">
+                        <div className="flex flex-col justify-between h-full">
+                            {
+                                [
+                                    "BE YOURSELF!",
+                                    "BE DIFFERENT!",
+                                    "BUILD DIFFERENT!"
+                                ].map(
+                                    (text, index) => (
+                                        <h1 className="gradient-title text-3xl md:text-5xl font-bold" key={index}>
+                                            {text}
+                                        </h1>
+                                    )
+                                )
+                            }
+                        </div>
+                    </div>
+                    </div>
+                    {/* Social Link */}
+                    
                 </div>
             </div>
         </div>

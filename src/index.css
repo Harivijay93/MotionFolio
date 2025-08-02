@@ -84,7 +84,7 @@ section {
     background: linear-gradient(
       20deg,
       #fdfdfd 0%,
-      rgba(87, 54, 54, 0) 100%
+      rgba(253, 253, 253, 0) 100%
     ); /* Gradient colors */
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
@@ -263,7 +263,7 @@ section {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-20vw) translateY(20vh);
+    transform: translateX(-20vw) translateY(50vh);
   }
   100% {
     transform: translateX(0);
