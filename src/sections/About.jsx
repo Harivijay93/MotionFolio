@@ -4,6 +4,7 @@ import TitleHead from "../components/TitleHead";
 import GradientSpheres from "../components/GradientSpheres";
 import { Alien } from "../components/models/Alien";
 import { OrbitControls } from "@react-three/drei";
+import { bentoSocialLinks } from "../constants";
 
 const About = () => {
   return (
@@ -84,7 +85,23 @@ const About = () => {
                     </div>
                     </div>
                     {/* Social Link */}
-                    
+                      {bentoSocialLinks.map((item, index) => (
+                        <div key={index} className="md:col-span-4 col-span-12 row-span-2">
+                            <div className="bg-black-300 rounded-2xl p-7 w-full h-full group cursor-pointer">
+                            <div className="flex justify-between items-center h-full">
+                                <div className="flex items-center md:gap-5">
+                                <img src={item.icon} alt={item.icon} />
+                                <h1 className="gradient-title md:text-3xl text-xl md:m-0 ms-5 font-medium">
+                                    {item.name}
+                                </h1>
+                                </div>
+                                <div className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform">
+                                <i class='bx bxs-right-top-arrow-circle md:text-5xl text-3xl'></i>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        ))}
                 </div>
             </div>
         </div>
