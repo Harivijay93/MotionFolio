@@ -1,14 +1,50 @@
+import react from "react";
 import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 
 import TitleHead from "../components/TitleHead";
 import GradientSpheres from "../components/GradientSpheres";
 import { Alien } from "../components/models/Alien";
-import { OrbitControls } from "@react-three/drei";
 import { bentoSocialLinks } from "../constants";
 
+// import gsap from "gsap";
+// import {useGSAP}  from "@gsap/react";
+// import { ScrollTrigger } from "@gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+
+//   useGSAP(() => {
+//     gsap.from("#card" ,{
+//         opacity: 0,
+//         y:50,
+//         stagger: 0.2,
+//         duration: 0.8,
+//         ease: "power3.inOut",
+//         scrollTrigger:{
+//             trigger:"#about",
+//             start:"top top",
+//             markers: false,
+//         },
+//     });
+
+//     // Text Animation
+//     gsap.from(".animate-text", {
+//         opacity: 0,
+//         y:20,
+//         stagger: 0.15,
+//         duration: 0.6,
+//         ease: "power3.inOut",
+//         scrollTrigger:{
+//             trigger:"#about",
+//             start:"top top",
+//             markers: false,
+//         },
+//     });
+//   }, []);
+
   return (
-    <section id='about' className='flex-center relative md:p-0 px-5 border border-red-500'>
+    <section id='about' className='flex-center relative md:p-0 px-5'>
         <GradientSpheres sphere1Class={"about-gradient-sphere about-sphere-1"} sphere2Class={"about-gradient-sphere about-sphere-2"}/>
 
         <div className='container w-full h-full my-20 md:my-40 relative z-10'>
@@ -40,32 +76,33 @@ const About = () => {
                         </div>
                        </div>
                     </div>
-                    <div className="md:col-span-6 col-span-12 row-span-3">
+                    {/* Web Design card */}
+                    <div id="card" className="md:col-span-6 col-span-12 row-span-3">
                         <div className="bg-black-300 rounded-2xl p-7 w-full h-full">
                             <div className="flex flex-col h-full justify-center gap-2">
-                            <h1 className="gradient-title md:text-3xl text-2xl font-medium">
+                            <h1 className="gradient-title md:text-3xl text-2xl font-medium animate-text">
                                 Web Design & Dev
                             </h1>
-                            <p className="md:text-2xl max-w-96">
+                            <p className="md:text-2xl max-w-96 animate-text">
                                 Cleanly Designed, Conversion-focused, and build for easy
                                 updates.
                             </p>
                             </div>
                         </div>
                     </div>
-                    <div className="md:col-span-6 col-span-12 row-span-3">
+                    <div id="card" className="md:col-span-6 col-span-12 row-span-3">
                     <div className="bg-black-300 rounded-2xl p-7 w-full h-full">
                         <div className="flex flex-col h-full justify-center gap-2">
-                        <h1 className="gradient-title md:text-3xl text-2xl font-medium">
+                        <h1 className="gradient-title md:text-3xl text-2xl font-medium animate-text">
                             UX UI Design
                         </h1>
-                        <p className="md:text-2xl max-w-96">
+                        <p className="md:text-2xl max-w-96 animate-text">
                             Seamless web or mobile app design to wow your users.
                         </p>
                         </div>
                     </div>
                     </div>
-                    <div className="md:col-span-4 col-span-12 row-span-4">
+                    <div id="card" className="md:col-span-4 col-span-12 row-span-4">
                     <div className="bg-black-300 rounded-2xl p-7 w-full h-full">
                         <div className="flex flex-col justify-between h-full">
                             {
@@ -75,7 +112,7 @@ const About = () => {
                                     "BUILD DIFFERENT!"
                                 ].map(
                                     (text, index) => (
-                                        <h1 className="gradient-title text-3xl md:text-5xl font-bold" key={index}>
+                                        <h1 className="gradient-title text-3xl md:text-5xl font-bold animate-text" key={index}>
                                             {text}
                                         </h1>
                                     )
@@ -88,17 +125,18 @@ const About = () => {
                       {bentoSocialLinks.map((item, index) => (
                         <div key={index} className="md:col-span-4 col-span-12 row-span-2">
                             <div className="bg-black-300 rounded-2xl p-7 w-full h-full group cursor-pointer">
-                            <div className="flex justify-between items-center h-full">
-                                <div className="flex items-center md:gap-5">
-                                <img src={item.icon} alt={item.icon} />
-                                <h1 className="gradient-title md:text-3xl text-xl md:m-0 ms-5 font-medium">
-                                    {item.name}
-                                </h1>
+                                <div className="flex justify-between items-center h-full">
+                                    <div className="flex items-center md:gap-5">
+                                        <img src={item.icon} alt={item.icon} />
+                                        <h1 className="gradient-title md:text-3xl text-xl 
+                                        md:m-0 ms-5 font-medium">
+                                            {item.name}
+                                        </h1>
+                                    </div>
+                                    <div className="lg:block md:hidden group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform">
+                                        <i class='bx bxs-right-top-arrow-circle md:text-5xl text-3xl'></i>
+                                    </div>
                                 </div>
-                                <div className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform">
-                                <i class='bx bxs-right-top-arrow-circle md:text-5xl text-3xl'></i>
-                                </div>
-                            </div>
                             </div>
                         </div>
                         ))}
