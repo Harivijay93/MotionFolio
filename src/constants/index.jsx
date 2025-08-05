@@ -69,25 +69,22 @@ const iconsList = [
     image: "/images/ts.svg",
   },
   {
-    name: "github",
-    image: "/images/github.svg",
+    name: "tailwind",
+    image: "/images/tailwindcss.svg",
   },
   {
+    name: "bootstrap",
+    image: "/images/bootstrap.svg",
+  },
+    {
     name: "gsap",
     image: "/images/gsap.svg",
   },
   {
-    name: "threejs",
-    image: "/images/threejs.svg",
+    name: "github",
+    image: "/images/github.svg",
   },
-  {
-    name: "figma",
-    image: "/images/figma.svg",
-  },
-  {
-    name: "aws",
-    image: "/images/aws.svg",
-  },
+
 ];
 
 // 
