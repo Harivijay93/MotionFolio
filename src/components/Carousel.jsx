@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect ,useState } from "react";
 import { slides } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -6,24 +6,30 @@ import gsap from "gsap";
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % (slides.length - 1));
-  };
-
   const prevSlide = () => {
     setCurrentSlide(
       (prevSlide) => (prevSlide - 1 + (slides.length - 1)) % (slides.length - 1)
     );
   };
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % (slides.length - 1));
+  };
 
-    tl.to(".slider-item", {
+
+  useGSAP(()=>{
+    // console.log(currentSlide);
+    gsap.to(".slider-item",{
       x: `-${currentSlide * 63}vw`,
-      duration: 1,
-      ease: "power2.inOut",
+      opacity: 1,
+      duration: 1.2,
+      ease: "expo.out",
     });
+    gsap.fromTo(
+      `.slider-item:nth-child(${currentSlide + 2}) img`,
+      { scale: 1.5 },
+      { scale: 1, duration:1.5 , ease: "power.inout" },
+    );
   }, [currentSlide]);
 
   return (
@@ -35,7 +41,7 @@ const Carousel = () => {
           <div className="flex w-full lg:h-[60vh] md:h-[40vh] h-[60vh] items-center gap-[3vw]">
             {slides.map((slide, index) => (
               <div
-                className="slider-item w-[60vw] h-full flex-none relative"
+                className="slider-item w-[60vw] h-full flex-none relative overflow-hidden"
                 key={index}
               >
                 <img
