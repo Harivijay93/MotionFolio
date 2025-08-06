@@ -1,7 +1,7 @@
 const TestimonialCard = ({ testimonial }) => {
   return (
     <div className="col-span-1 p-10 bg-black-300 hover:bg-blue-300 rounded-xl
-    hover:-translate-y-3 transition-all  testimonial-card">
+    hover:-translate-y-3 transition-all duration-700 testimonial-card">
       <div className="flex items-center justify-between">
         <img
           src={testimonial.imgPath}
