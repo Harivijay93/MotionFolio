@@ -1,6 +1,6 @@
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="col-span-1 p-10 bg-black-300 hover:bg-blue-700 rounded-xl
+    <div className="col-span-1 p-10 bg-black-300 hover:bg-blue-300 rounded-xl
     hover:-translate-y-3 transition-all  testimonial-card">
       <div className="flex items-center justify-between">
         <img
@@ -27,8 +27,8 @@ const TestimonialCard = ({ testimonial }) => {
           </p>
         </div>
         <div className="flex items-center gap-3 md:mt-0 mt-5">
-          <img src="./images/x.svg" alt="x" className="md:size-12 size-5" />
-          <img src="./images/fb.svg" alt="x" className="md:size-12 size-5" />
+          <i class='bx bxl-whatsapp md:text-5xl text-2xl'></i>
+          <i class='bx bxl-instagram md:text-5xl text-2xl'></i>
         </div>
       </div>
     </div>
