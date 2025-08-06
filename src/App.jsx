@@ -3,6 +3,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import TechStack from './sections/TechStack'
 import Projects from './sections/Projects'
+import Testimonials from './sections/Testimonials'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <About />
       <TechStack />
       <Projects />
+      <Testimonials />
     </div>
   )
 }
