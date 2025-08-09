@@ -24,17 +24,3 @@ MotionFolio is a personal portfolio website designed to highlight your work, ski
 - Project showcase & contact form
 - Clean, minimal, and accessible UI
 
----
-
-## 📦 Getting Started
-
-```bash
-# Clone the repository
-git clone https://github.com/Harivijay93/motionfolio.git
-cd motionfolio
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
