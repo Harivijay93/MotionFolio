@@ -14,9 +14,11 @@ const Testimonials = () => {
       <div className="w-full h-full container relative z-10 md:my-40 my-20">
         <TitleHead
           title="TESTIMONIALS"
-          number="03"
+          number="04"
           text="Watch our clients are saying about us"
         />
+
+        
         <div className="mt-20">
           <div className="grid md:grid-cols-2 gap-5">
             {testimonials.map((testimonial, index) => (
