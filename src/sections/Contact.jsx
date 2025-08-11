@@ -15,7 +15,7 @@ const Contact = () => {
            <div className="mt-20">
               <div className="grid grid-cols-12">
                 <div className="md:col-span-5 col-span-12"></div>
-                <div className="col-span-7 col-span-12"></div>
+                <div className="md:col-span-7 col-span-12"></div>
               </div>
            </div>
         </div>
