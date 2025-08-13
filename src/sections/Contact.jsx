@@ -19,7 +19,7 @@ const Contact = () => {
                   <ContactForm />
                 </div>
                 <div className="md:col-span-7 col-span-12">
-                  <div className="w-full h-full md:m-0 -mt-32 border">
+                  <div className="w-full h-full md:m-0 -mt-32">
                     <ContactExperience />
                   </div>
                 </div>
@@ -29,5 +29,6 @@ const Contact = () => {
     </section>
   )
 }
+
 
 export default Contact
